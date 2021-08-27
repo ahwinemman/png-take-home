@@ -1,7 +1,7 @@
-#Pub-Sub Service
+# Pub-Sub Service
 This project is build with the Spring Boot Framework
 
-## Getting Started
+## Getting Started:
 
 $ chmod +x start-server.sh
 
