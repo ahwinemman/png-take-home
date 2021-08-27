@@ -3,14 +3,19 @@ This project is build with the Spring Boot Framework
 
 ## Getting Started:
 
+```shell script
 $ chmod +x start-server.sh
 
 $ ./start-server.sh
+```
 
 ## Run the curl commands to test
+
+```shell script
 $ chmod +x test.sh
 
 $ ./test.sh
+```
 
 ## Postman collection folder
 $ /postman/
