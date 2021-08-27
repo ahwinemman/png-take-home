@@ -1,0 +1,34 @@
+  version: "3.7"
+  services:
+    pub-server:
+      container_name: pub-server
+      build:
+        context: ./pub-server
+        dockerfile: Dockerfile
+      ports:
+        - "8080:8080"
+      networks:
+        pub-sub-network:
+          ipv4_address: 172.25.0.80
+          aliases:
+            - pub-server.local
+
+    sub-server:
+      container_name: sub-server
+      build:
+        context: ./sub-server
+        dockerfile: Dockerfile
+      ports:
+        - "9000:9000"
+      networks:
+        pub-sub-network:
+          ipv4_address: 172.25.0.90
+          aliases:
+            - sub-server.local
+
+  networks:
+    pub-sub-network:
+      ipam:
+        driver: default
+        config:
+          - subnet: 172.25.0.0/16
