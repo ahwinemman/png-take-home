@@ -18,12 +18,15 @@ $ ./test.sh
 ```
 
 ## Postman collection folder
-$ /postman/
+
+```shell script
+cd postman/
+```
 
 ## External/Internal endpoints
-$ pub-server : localhost:8080 / 172.25.0.80:8080
+pub-server : localhost:8080 / 172.25.0.80:8080
 
-$ sub-server : localhost:9000 / 172.25.0.90:9000
+sub-server : localhost:9000 / 172.25.0.90:9000
 
 ## Database
 - In-memory / Embedded database (H2) is used in the pub-server to store subscriptions
